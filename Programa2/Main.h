@@ -139,5 +139,17 @@ struct spline {
 	int	    puntosporTramo;
 };
 
+struct esfera {
+	CVector centro;
+	float radio;
+	bool colisionesfera;
+};
+
+struct rayo {
+	CVector origen;
+	CVector direccion;
+	bool colisionrayo;
+};
+
 
 #endif 
