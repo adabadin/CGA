@@ -1,6 +1,6 @@
 #ifndef _MAIN_H
 #define _MAIN_H
-
+   
 #include <windows.h>		// Archivo de cabecera para Windows
 #include <math.h>			// Archivo de cabecera para Funciones Matemáticas
 #include <stdio.h>			// Header File For Standard Input/Output
