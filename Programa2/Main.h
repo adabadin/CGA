@@ -112,26 +112,6 @@ struct t3DModel
 	
 };
 
-struct boundingplane
-{
-	CVector Normal;
-	CVector PM;
-	CVector A, B, C, D;
-	CVector b1, b2, b3, b4;
-	CVector b1Pm, b2Pm, b3Pm, b4Pm;
-	CVector b1Normal, b2Normal, b3Normal, b4Normal;
-	float ancho;
-	float alto;
-};
-
-struct boundingsphere
-{
-	CVector Pos;
-	float radio;
-	bool colision;
-	
-};
-
 struct spline {
 	CVector *puntosctrl;
 	int	    totalPuntosControl;
