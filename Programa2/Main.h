@@ -1,6 +1,6 @@
 #ifndef _MAIN_H
 #define _MAIN_H
-   
+
 #include <windows.h>		// Archivo de cabecera para Windows
 #include <math.h>			// Archivo de cabecera para Funciones Matemáticas
 #include <stdio.h>			// Header File For Standard Input/Output
@@ -20,7 +20,7 @@
 #include "cargadorTGA.h"
 #include "Shaders.h"
 #include "Multitexturas.h"
-#include "Materiales.h" 
+#include "Materiales.h"
 #include "Font.h"
 
 using namespace std;
@@ -109,6 +109,26 @@ struct t3DModel
 	int contVert;
 	int contMat;
 	int contGroups;
+	
+};
+
+struct boundingplane
+{
+	CVector Normal;
+	CVector PM;
+	CVector A, B, C, D;
+	CVector b1, b2, b3, b4;
+	CVector b1Pm, b2Pm, b3Pm, b4Pm;
+	CVector b1Normal, b2Normal, b3Normal, b4Normal;
+	float ancho;
+	float alto;
+};
+
+struct boundingsphere
+{
+	CVector Pos;
+	float radio;
+	bool colision;
 	
 };
 
