@@ -22,6 +22,10 @@
 #include "Multitexturas.h"
 #include "Materiales.h"
 #include "Font.h"
+#include "fmod/fmod.h"
+#include "fmod/fmod_errors.h"
+
+int ProcessKeys(FMOD_SYSTEM *system, FMOD_RESULT result);
 
 using namespace std;
 
