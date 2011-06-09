@@ -116,23 +116,36 @@ struct t3DModel
 	
 };
 
-struct boundingplane
+struct parametros
 {
-	CVector Normal;
-	CVector PM;
-	CVector A, B, C, D;
-	CVector b1, b2, b3, b4;
-	CVector b1Pm, b2Pm, b3Pm, b4Pm;
-	CVector b1Normal, b2Normal, b3Normal, b4Normal;
-	float ancho;
-	float alto;
-};
+	CVector PosicionObj;	//La posición (x,y,z) del objeto
+	CVector PosicionObjA;	//La posición (x,y,z) del objeto
+	CVector Direccion;		//La dirección en que se dirige el objeto en forma de vector=(x,y,z)
+	CVector PosicionCam;    //La posición de la cámara que sigue al objeto
+	CVector ObjetivoCam;	//El punto (x,y,z) que está viendo la cámara; en este caso al objeto
+	CVector PosAntObj;	//La posición (x,y,z) del objeto
 
-struct boundingsphere
-{
-	CVector Pos;
-	float radio;
-	bool colision;
+	float VelocidadObj;		//La velocidad a la que se mueve el objeto
+	float DistanciaCam;		//La distancia que la cámara está separada del objeto
+	float AngDir;			//Se usa para llevar control del angulo para el cálculo del vector de dirección
+	float AngObj;			//Se usa para llevar control del ángulo de rotación para el modelo del objeto
+
+	float CamaraPosAlt;		//Se usa para definir y cambiar si es necesario la altura de la cámara
+	float CamaraObjAlt;		//Se usa para definir y cambiar si es necesario la altura del objetivo de la cámara
+
+	float CamaraObjAltE;
+
+	float escalaX;
+	float escalaY;
+	float escalaZ;
+
+	int Dir;				//1: Hacia adelante; 2: hacia atras; 3: hacia la izquierda; 4: hacia la derecha
+	int DirAnt;
+
+	bool visible;
+	bool caminando;
+	bool saltando;
+	bool disparando;
 	
 };
 
@@ -143,16 +156,20 @@ struct spline {
 	int	    puntosporTramo;
 };
 
-struct esfera {
-	CVector centro;
+//Colisiones
+struct esfera
+{
+	CVector Pos;
 	float radio;
-	bool colisionesfera;
+	bool colision;
+	
 };
 
-struct rayo {
+struct rayo
+{
 	CVector origen;
-	CVector direccion;
-	bool colisionrayo;
+	CVector dir;
+	bool colision;
 };
 
 
