@@ -172,5 +172,7 @@ struct rayo
 	bool colision;
 };
 
+#include "Bala.h"
+#include "Enemigo.h"
 
 #endif 
