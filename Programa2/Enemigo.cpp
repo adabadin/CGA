@@ -7,7 +7,7 @@ Enemigo::Enemigo()
 	i = 0;
 	// Set the shooting timer to its default value
 	//delay = 115 + rand() % ((200 + 1) - 115 );
-	delay = 200;
+	delay = 50;
 }
 
 void Enemigo::setPos( float x, float y, float z )
@@ -32,7 +32,7 @@ CVector Enemigo::attack()
 	// CVector bull = pos;
 	// reset the current delay 
 	// delay = 115 + rand() % ((200 + 1) - 115 );
-	delay = 200;
+	delay = 100;
 	return pos;
 }
 

@@ -14,9 +14,9 @@ public:
 	void cPara( float vel, float radius, CVector destino );
 	void dBala();
 	void moveToTarget();
+	void updateTarget( CVector target );
 	esfera getSphere();
 
-private:
 	float speed;
 	esfera bala;
 	CVector sTarget;

@@ -3,7 +3,7 @@
 Bala::Bala( CVector origen, CVector destino )
 {
 	bala.Pos = origen;
-	cPara( 5.0f, 2.0f, destino );
+	cPara( 0.1f, 0.3f, destino );
 }
 
 void Bala::cPara( float vel, float radius, CVector destino )
@@ -41,7 +41,8 @@ void Bala::moveToTarget()
 {
 	if( ( bala.Pos.x <= sTarget.x + bala.radio && bala.Pos.x >= sTarget.x - bala.radio ) &&
 		( bala.Pos.x <= sTarget.y + bala.radio && bala.Pos.y >= sTarget.y - bala.radio ) &&
-		( bala.Pos.x <= sTarget.z + bala.radio && bala.Pos.z >= sTarget.z - bala.radio ) )
+		( bala.Pos.x <= sTarget.z + bala.radio && bala.Pos.z >= sTarget.z - bala.radio ) 
+		)
 	{
 		//speed = 0.0f;
 		// shit I dunno why but it never reaches this point lol, so much for that, huh?
@@ -54,8 +55,13 @@ void Bala::moveToTarget()
 		temp = Normaliza( temp );
 		// Move towards the next point according to our speed
 		bala.Pos = bala.Pos + temp * speed;
-		dBala();
+		//dBala();
 	}
+}
+
+void Bala::updateTarget( CVector target )
+{
+	sTarget = target;
 }
 
 esfera Bala::getSphere()
