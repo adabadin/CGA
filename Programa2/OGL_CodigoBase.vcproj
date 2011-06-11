@@ -189,7 +189,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Bala.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\cargadorTGA.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Enemigo.cpp"
 				>
 			</File>
 			<File
@@ -231,7 +239,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Bala.h"
+				>
+			</File>
+			<File
 				RelativePath=".\cargadorTGA.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Enemigo.h"
 				>
 			</File>
 			<File
