@@ -40,8 +40,8 @@ void Bala::dBala()
 void Bala::moveToTarget()
 {
 	if( ( bala.Pos.x <= sTarget.x + bala.radio && bala.Pos.x >= sTarget.x - bala.radio ) &&
-		( bala.Pos.x <= sTarget.y + bala.radio && bala.Pos.y >= sTarget.y - bala.radio ) &&
-		( bala.Pos.x <= sTarget.z + bala.radio && bala.Pos.z >= sTarget.z - bala.radio ) 
+		( bala.Pos.y <= sTarget.y + bala.radio && bala.Pos.y >= sTarget.y - bala.radio ) &&
+		( bala.Pos.z <= sTarget.z + bala.radio && bala.Pos.z >= sTarget.z - bala.radio ) 
 		)
 	{
 		//speed = 0.0f;

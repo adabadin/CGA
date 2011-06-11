@@ -161,7 +161,7 @@ struct esfera
 {
 	CVector Pos;
 	float radio;
-	bool colision;
+	//bool colision;
 	
 };
 
