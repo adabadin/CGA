@@ -31,8 +31,8 @@ CVector Enemigo::attack()
 	// create one bullet vector
 	// CVector bull = pos;
 	// reset the current delay 
-	// delay = 115 + rand() % ((200 + 1) - 115 );
-	delay = 100;
+	delay = 90 + rand() % ((110 + 1) - 90 );
+	//delay = 100;
 	return pos;
 }
 

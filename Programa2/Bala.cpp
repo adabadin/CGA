@@ -3,7 +3,7 @@
 Bala::Bala( CVector origen, CVector destino )
 {
 	bala.Pos = origen;
-	cPara( 0.1f, 0.3f, destino );
+	cPara( 0.06f, 0.2f, destino );
 }
 
 void Bala::cPara( float vel, float radius, CVector destino )
